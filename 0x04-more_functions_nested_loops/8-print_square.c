@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * print_square -	prints a sqaure of '#'
@@ -28,4 +28,4 @@ void print_square(int size)
 			_putchar('\n');
 		}
 	}
-}
+i}
