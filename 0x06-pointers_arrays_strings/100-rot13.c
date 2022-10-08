@@ -7,21 +7,21 @@
 
 char *rot13(char *str)
 {
-	int indx1 = 0, indx2;
-	char alphabet[52] = {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz};
-	char rot13key[52] = {NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm};
+	int count = 0, i;
+	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (str[indx1])
+	while (*(str + count) != '\0')
 	{
-		for (indx2 = 0; indx2 < 52; indx2++)
+		for (i = 0; i < 52; i++)
 		{
-			if (str[indx1] == alphabet[indx2])
+			if (*(str + count) == alphabet[i])
 			{
-				str[indx1] = rot13key[indx2];
+				*(str + count) = rot13[i];
 				break;
 			}
 		}
-		indx1++;
+		count++;
 	}
 	return (str);
 }
