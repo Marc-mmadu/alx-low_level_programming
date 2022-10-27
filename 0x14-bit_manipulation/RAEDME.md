@@ -1,0 +1,1 @@
+starting bit manipulation
